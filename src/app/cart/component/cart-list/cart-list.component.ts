@@ -19,8 +19,8 @@ export class CartListComponent implements OnInit {
     return this.cartService.items;
   }
 
-  onClear():void{
-    console.log("clear")
+  onClear(): void {
+    console.log('clear');
     this.cartService.items.clear();
   }
 }
