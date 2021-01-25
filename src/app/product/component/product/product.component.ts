@@ -11,6 +11,9 @@ export class ProductComponent {
   @Input()
   product!: ProductModel;
 
+  // Не надо добавлять зависимость - каждая зависимость усложняет компонент.
+  // Этот компонент получает данные для отображения, пусть генерит аутпут родителю,
+  // когда его надо добавить в корзину
   constructor(private cartService: CartService) {
   }
 
