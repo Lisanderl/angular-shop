@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductModel } from '../../model/product-model';
 import { ProductsService } from '../../service/products.service';
 
 @Component({
@@ -7,7 +8,8 @@ import { ProductsService } from '../../service/products.service';
   styleUrls: ['./product-list.component.sass']
 })
 export class ProductListComponent implements OnInit {
-  productSet: any;
+  productSet: Set<ProductModel> = new Set<ProductModel>();
+
   constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
