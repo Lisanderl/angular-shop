@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProductModel } from 'src/app/product/model/product-model';
 import { CartService } from '../../service/cart.service';
 
@@ -9,18 +9,15 @@ import { CartService } from '../../service/cart.service';
 })
 export class CartListComponent implements OnInit {
 
-  constructor(private cartService: CartService) { }
+  @Input() cartItems!: Set<ProductModel>;
+  constructor() { }
 
   ngOnInit(): void {
 
   }
 
-  get items(): Set<ProductModel> {
-    return this.cartService.items;
-  }
-
   onClear(): void {
     console.log('clear');
-    this.cartService.items.clear();
+    this.cartItems.clear();
   }
 }

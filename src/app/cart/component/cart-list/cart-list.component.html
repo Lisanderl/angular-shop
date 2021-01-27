@@ -1,7 +1,7 @@
-<div *ngIf="items.size == 0; else elseBlock">cart-list is empty</div>
+<div *ngIf="cartItems === null || cartItems.size == 0; else elseBlock">cart-list is empty</div>
 <ng-template #elseBlock>
     <h1>Your bucket:</h1>
-    <ul *ngFor="let item of items">
+    <ul *ngFor="let item of cartItems">
         <li>{{item.name}}</li>
     </ul>
     <button (click)="onClear()">clear</button>

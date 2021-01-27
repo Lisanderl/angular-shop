@@ -1,3 +1,5 @@
 <p>Avalible products list: </p>
 
-<app-product *ngFor="let product of productSet " [product]="product"></app-product>
+<app-product (productToCard)="onAdToCart($event)" *ngFor="let product of productSet " [product]="product"></app-product>
+
+<app-cart-list [cartItems]="cartService.items"></app-cart-list>

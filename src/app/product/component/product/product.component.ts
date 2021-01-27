@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { CartService } from 'src/app/cart/service/cart.service';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ProductModel } from '../../model/product-model';
 
 @Component({
@@ -8,14 +7,14 @@ import { ProductModel } from '../../model/product-model';
   styleUrls: ['./product.component.sass']
 })
 export class ProductComponent {
-  @Input()
-  product!: ProductModel;
+  @Input() product!: ProductModel;
+  @Output() productToCard: EventEmitter<ProductModel> = new EventEmitter<ProductModel>();
 
-  constructor(private cartService: CartService) {
+  constructor() {
   }
 
   onAdd(product: ProductModel): void {
     console.log('wow you add that item: ' + product);
-    this.cartService.addProduct(product);
+    this.productToCard.emit(product);
   }
 }
