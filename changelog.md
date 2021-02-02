@@ -20,3 +20,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comments from PR
 - added input\outputs to product and card-list
 
+
+## Task2 [1.0.0] - 2020-02-02
+- Added modules
+- Imported all needed modules to AppModule
+- Added logic based on Inputs\Outputs
+- Added card items count and cost calculation to CadService
+

@@ -1,1 +1,2 @@
-<app-product-list></app-product-list>
+<app-product-list [products]="productService.getProducts()" (productToCard)="onAddProductToCard($event)"></app-product-list>
+<app-cart-list [cartItems]="cartService.items" [totalCost]="cartService.getTotalAmountOfProducs()" [totalAmount]="cartService.getCountOfProducs()" (clear)="onClear($event)"></app-cart-list>
