@@ -16,7 +16,7 @@ export class AppComponent implements AfterViewInit {
 
   }
   ngAfterViewInit(): void {
-    console.log(this.appTitleH1.nativeElement)
+    console.log(this.appTitleH1.nativeElement);
     this.appTitleH1.nativeElement.innerHTML = 'Shop app';
   }
 
@@ -30,9 +30,9 @@ export class AppComponent implements AfterViewInit {
     this.cartService.clear();
   }
 
-  onInput(vale: KeyboardEvent): void {
-    let target = (<HTMLInputElement>vale.target);
+  onCustomName(vale: KeyboardEvent): void {
+    const target = vale.target as HTMLInputElement;
     console.log('input event ' + target.value);
-    //target.value = '';
+    this.appTitleH1.nativeElement.innerHTML = target.value;
   }
 }

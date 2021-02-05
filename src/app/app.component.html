@@ -1,4 +1,4 @@
 <h1 #appTitle></h1>
-<input #inp (keydown.enter)="onInput($event)" (blur)="inp.value=''" />
+<input #inp (keydown.enter)="onCustomName($event)" (keyup.enter)="inp.value=''" (blur)="inp.value=''" />
 <app-product-list [products]="productService.getProducts()" (productToCard)="onAddProductToCard($event)"></app-product-list>
 <app-cart-list [cartItems]="cartService.items" [totalCost]="cartService.getTotalAmountOfProducs()" [totalAmount]="cartService.getCountOfProducs()" (clear)="onClear($event)"></app-cart-list>

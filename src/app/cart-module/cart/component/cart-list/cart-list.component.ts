@@ -6,7 +6,7 @@ import { ProductModel } from 'src/app/products-module/product/model/product-mode
   selector: 'app-cart-list',
   templateUrl: './cart-list.component.html',
   styleUrls: ['./cart-list.component.sass'],
-  changeDetection: ChangeDetectionStrategy.Default,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CartListComponent {
 
