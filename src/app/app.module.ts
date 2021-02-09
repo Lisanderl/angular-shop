@@ -16,6 +16,7 @@ import { CartModuleModule } from './cart-module/cart-module.module';
     BrowserModule,
     FormsModule,
     NgSelectModule,
+    // желательно убрать дублирующийся суффикс Module
     ProductsModuleModule,
     CartModuleModule
   ],

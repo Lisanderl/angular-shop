@@ -6,7 +6,7 @@ import { ProductModel } from 'src/app/products-module/product/model/product-mode
   providedIn: 'root'
 })
 export class CartService {
-  private cartItems: Array<ProductModel> = new Array<ProductModel>();
+  private cartItems: Array<ProductModel> = [];
 
   get items(): Array<ProductModel> {
     return this.cartItems;

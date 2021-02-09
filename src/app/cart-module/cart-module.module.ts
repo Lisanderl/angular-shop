@@ -7,9 +7,10 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
 @NgModule({
   declarations: [
     CartListComponent],
-  providers: [
-    CartService
-  ],
+  // Зарегистрирован через свой декоратор
+  // providers: [
+  //   CartService
+  // ],
   imports: [
     CommonModule,
     SharedModuleModule
