@@ -11,9 +11,10 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
     ProductComponent,
     ProductListComponent
   ],
-  providers: [
-    ProductsService
-  ],
+  // Зарегистрирован через свой собственный декоратор
+  // providers: [
+  //   ProductsService
+  // ],
   imports: [
     CommonModule
   ],
